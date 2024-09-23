@@ -1,0 +1,12 @@
+{% extends base_template %}
+
+{% block title %}{{ year }}{% endblock %}
+{% block content %}
+<h1>{{ year }}</h1>
+{% for entry in entries %}
+<h3>
+  <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>
+  <em style="font-weight: normal; font-style: normal;"> - {{ entry.created }}</em>
+</h3>
+{% endfor %}
+{% endblock %}

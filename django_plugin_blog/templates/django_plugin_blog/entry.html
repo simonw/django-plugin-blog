@@ -1,0 +1,25 @@
+{% extends base_template %}
+
+{% block title %}{{ entry.title }}{% endblock %}
+
+{% block extra_head %}
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="{{ entry.title }}">
+{% if entry.card_image %}<meta property="og:image" content="{{ entry.card_image }}">{% endif %}
+<meta property="og:type" content="article">
+<meta property="og:description" content="{{ entry.summary_text }}">
+{% if entry.is_draft %}
+<meta name="robots" content="noindex">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<article>
+  <h1>{{ entry.title }}{% if entry.is_draft %} (draft){% endif %}</h1>
+  <p class="dateline">{{ entry.created }}{% for user in entry.authors.all %} {{ user.get_full_name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>{{ entry.summary_rendered }}</strong></p>
+  <div>
+    {{ entry.body_rendered }}
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends base_template %}
+{% block title %}Blog archive{% endblock %}
+{% block content %}
+<h1>Blog archive</h1>
+
+{% regroup entries by created.year as entries_by_year %}
+
+{% for year, entries in entries_by_year %}
+    <h2>{{ year }}</h2>
+    {% for entry in entries %}
+    <h3><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a><em style="font-weight: normal; font-style: normal;"> - {{ entry.created }}</em></h3>
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}
