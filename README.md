@@ -5,7 +5,7 @@
 [![Tests](https://github.com/simonw/django-plugin-blog/workflows/Test/badge.svg)](https://github.com/simonw/django-plugin-blog/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/django-plugin-blog/blob/main/LICENSE)
 
-A simple blog implemented as a DJP plugin
+A simple blog implemented as a [DJP plugin](https://djp.readthedocs.io/).
 
 ## Installation
 
