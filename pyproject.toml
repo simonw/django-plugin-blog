@@ -11,7 +11,7 @@ classifiers = [
 dependencies = [
     "django",
     "Markdown",
-    "djp",
+    "djp>=0.1",
 ]
 
 [project.urls]
