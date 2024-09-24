@@ -20,6 +20,9 @@ Changelog = "https://github.com/simonw/django-plugin-blog/releases"
 Issues = "https://github.com/simonw/django-plugin-blog/issues"
 CI = "https://github.com/simonw/django-plugin-blog/actions"
 
+[tool.setuptools.package-data]
+"*" = ["*.html", "*.js", "*.css"]
+
 [project.entry-points.djp]
 django_plugin_blog = "django_plugin_blog"
 
