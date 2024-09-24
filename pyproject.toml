@@ -1,6 +1,6 @@
 [project]
 name = "django-plugin-blog"
-version = "0.1"
+version = "0.1.1"
 description = "A simple blog implemented as a DJP plugin"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
